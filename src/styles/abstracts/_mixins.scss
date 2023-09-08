@@ -4,6 +4,20 @@
   font-family: "SF Pro Display", sans-serif;
 }
 
+@mixin link-reset-styles {
+  cursor: pointer !important;
+  -webkit-tap-highlight-color: transparent !important;
+  text-decoration: none !important;
+  text-decoration-skip-ink: auto !important;
+
+  &:hover {
+    span {
+      text-decoration: underline;
+      color: $link-color;
+    }
+  }
+}
+
 @mixin hover-state($withCustomTransition: false, $cursor: true) {
   @if not $withCustomTransition {
     @include with-transition(color, background-color, opacity);

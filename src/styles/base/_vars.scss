@@ -6,8 +6,3 @@ $slipped: $below + $base;
 $overlapping: $above + $base;
 $main: $above + $overlapping;
 $covering: $above + $main;
-
-// transition
-$transition-duration: 0.2s;
-$transition-duration-long: 0.4s;
-$transition-timing-function: ease-in-out;
