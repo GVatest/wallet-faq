@@ -1,0 +1,115 @@
+#docsSearch {
+  all: initial;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+
+  margin-bottom: 48px;
+
+  h1 {
+    all: initial;
+
+    @include font-sf;
+    color: $text-main-headline-color;
+    font-size: 32px;
+    font-weight: 590;
+    line-height: 120%;
+    letter-spacing: 0.416px;
+  }
+
+  #searchBar {
+    all: initial;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    .search-query {
+      all: initial;
+      width: 100%;
+
+      display: flex;
+      padding: 16px;
+      align-items: flex-start;
+      gap: 12px;
+
+      border-radius: 20px;
+      background: rgba(239, 239, 244, 0.48);
+
+      @include font-sf;
+      color: $hint-color;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 120%;
+    }
+
+    button {
+      all: initial;
+      width: 56px;
+      height: 56px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+
+      border-radius: 16px;
+      background: $link-color;
+
+      .icon-search {
+        display: block;
+        color: $bg-color;
+        font-size: 24px;
+        font-weight: 590;
+        line-height: 120%;
+        letter-spacing: -0.46px;
+      }
+
+      span {
+        display: none;
+      }
+    }
+  }
+}
+
+.most-pop-articles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 40px 48px;
+  border-radius: 20px;
+  background: $block-background;
+
+  &::after {
+    display: none;
+  }
+
+  &::before {
+    display: none;
+  }
+
+  h2 {
+    margin-bottom: 0;
+
+    @include font-sf;
+    color: $text-main-headline-color;
+    font-size: 28px;
+    font-weight: 590;
+    line-height: 120%;
+    letter-spacing: 0.392px;
+  }
+
+  .popArticles {
+    all: initial;
+    display: flex !important;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+
+    li {
+      margin: 0;
+    }
+  }
+}
