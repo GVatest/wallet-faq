@@ -1,6 +1,8 @@
+#sidebar #searchBar,
 #searchBar {
   .search-query {
     all: initial;
+    box-sizing: border-box;
     width: 100%;
 
     display: flex;

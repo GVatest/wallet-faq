@@ -64,8 +64,10 @@ function addLangToggle() {
 }
 
 // wrap paragraphs of text separated by a hr[role="separator"] for further styling
+// and move article timestamp in last content block
 function formatArticle() {
   const articleWrapper = document.querySelector("#fullArticle");
+  const articleFooter = document.querySelector(".articleFoot");
 
   if (!articleWrapper) {
     return;
@@ -85,10 +87,24 @@ function formatArticle() {
     articleWrapper.appendChild(contentBlockWrapper.cloneNode(true));
     contentBlockWrapper.innerHTML = "";
   });
+
+  const lastContentBlock = articleWrapper.lastChild;
+  lastContentBlock.innerHTML =
+    lastContentBlock.innerHTML + articleFooter.innerHTML;
+  articleFooter.remove();
+}
+
+function formatCategoryPage() {
+  const articleList = document.querySelector(".articleList");
+
+  if (!articleList) return;
+
+  document.querySelector(".contentWrapper").classList.add("styled");
 }
 
 document.addEventListener("DOMContentLoaded", initPage);
 function initPage() {
   addLangToggle();
   formatArticle();
+  formatCategoryPage();
 }

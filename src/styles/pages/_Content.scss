@@ -1,0 +1,121 @@
+#contentArea {
+  max-width: 1168px;
+
+  #main-content {
+    width: calc(100% - 344px);
+    padding: 0;
+    background: none;
+    margin: 0 !important;
+
+    @include breakpoint-md-m {
+      width: 100%;
+    }
+
+    .contentWrapper {
+      padding: 0;
+      border: none;
+      background: none;
+
+      .sort {
+        display: none;
+      }
+
+      @include breakpoint-md {
+        &.styled {
+          padding: 32px;
+
+          border-radius: 20px;
+          background: rgba(239, 239, 244, 0.48);
+        }
+      }
+
+      #categoryHead {
+        margin-bottom: 30px;
+        h1 {
+          color: $text-main-color;
+          @include font-sf;
+          font-size: 28px;
+          font-weight: 590;
+          line-height: 120%;
+        }
+      }
+
+      #fullArticle {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        @include breakpoint-md-m {
+          gap: 40px;
+        }
+
+        .contentBlockWrapper {
+          margin: 0;
+          padding: 32px;
+
+          border-radius: 20px;
+          background: $block-background;
+
+          @include breakpoint-md-m {
+            padding: 0;
+            background: none;
+          }
+
+          .printArticle {
+            display: none;
+          }
+
+          h1,
+          h2 {
+            margin: 0 0 20px 0;
+            color: $text-main-color;
+            @include font-sf;
+            font-size: 28px;
+            font-weight: 590;
+            line-height: 120%;
+
+            &:not(:last-child) {
+              margin: 0 0 20px 0;
+            }
+
+            &:last-child {
+              margin: 0;
+            }
+          }
+
+          p {
+            color: $text-main-color;
+            @include font-sf;
+            text-align: justify;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 120%;
+
+            &:not(:last-child) {
+              margin-bottom: 20px;
+            }
+
+            &:last-child {
+              margin: 0;
+            }
+
+            a {
+              color: $link-color;
+            }
+          }
+
+          time {
+            display: inline-block;
+            color: $hint-color;
+            @include font-sf;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 120%;
+
+            margin-top: 12px;
+          }
+        }
+      }
+    }
+  }
+}

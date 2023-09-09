@@ -27,6 +27,13 @@ $screen-xl: 1440px;
   }
 }
 
+// less than 768px
+@mixin breakpoint-md-m {
+  @media (max-width: #{$screen-md}) {
+    @content;
+  }
+}
+
 // more than 960px
 @mixin breakpoint-pre-lg {
   @media (min-width: #{$screen-pre-lg}) {
