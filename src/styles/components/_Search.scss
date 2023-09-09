@@ -1,0 +1,81 @@
+#searchBar {
+  .search-query {
+    all: initial;
+    width: 100%;
+
+    display: flex;
+    padding: 16px 16px 16px 56px;
+    align-items: flex-start;
+    gap: 12px;
+
+    border-radius: 20px;
+    background: rgba(239, 239, 244, 0.48);
+
+    @include font-sf;
+    color: $hint-color;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 120%;
+  }
+
+  #serp-dd {
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0px 12px 44px 4px rgba(0, 0, 0, 0.04);
+    border: none;
+    overflow: hidden;
+
+    .result {
+      max-height: 364px;
+
+      li {
+        margin: 0 !important;
+        &:hover {
+          a {
+            background: rgba(239, 239, 244, 0.88);
+          }
+        }
+
+        &.active {
+          background: rgba(239, 239, 244, 0.88);
+        }
+
+        &.noResults {
+          padding: 16px;
+          text-align: center;
+
+          color: $text-main-color;
+          @include font-sf;
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 120%;
+        }
+
+        a {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          padding: 16px;
+
+          color: $text-main-color;
+          @include font-sf;
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 120%;
+
+          &::before {
+            display: block;
+            width: 20px;
+            height: 20px;
+            margin: 0;
+            content: "";
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-image: url(https://imagedelivery.net/UUQsFXARBFTBsNkIaLN9VQ/b99f4f78-bfd8-4c96-e193-bce56aa8c800/public);
+          }
+        }
+      }
+    }
+  }
+}

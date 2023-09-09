@@ -42,25 +42,6 @@
       background-image: url(https://imagedelivery.net/UUQsFXARBFTBsNkIaLN9VQ/33b11083-703a-44d8-d255-ea51fac99d00/public);
     }
 
-    .search-query {
-      all: initial;
-      width: 100%;
-
-      display: flex;
-      padding: 16px 16px 16px 56px;
-      align-items: flex-start;
-      gap: 12px;
-
-      border-radius: 20px;
-      background: rgba(239, 239, 244, 0.48);
-
-      @include font-sf;
-      color: $hint-color;
-      font-size: 20px;
-      font-weight: 400;
-      line-height: 120%;
-    }
-
     button {
       all: initial;
       width: 56px;
