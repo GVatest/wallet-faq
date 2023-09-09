@@ -62,6 +62,8 @@ nav[role="navigation"] {
     line-height: 22px;
     cursor: pointer;
 
+    -webkit-tap-highlight-color: transparent;
+
     &::before {
       display: block;
       width: 17px;
