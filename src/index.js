@@ -23,6 +23,8 @@ function addLangToggle() {
     return;
   }
 
+  if (document.querySelector(".defaultLang")) return;
+
   const defaultLang = document.createElement("span");
   defaultLang.className = "defaultLang";
   defaultLang.innerHTML = CURRENT_LANG;
@@ -76,11 +78,17 @@ function formatArticle() {
   const contentBlockWrapper = document.createElement("div");
   contentBlockWrapper.className = "contentBlockWrapper";
 
-  const contentNodes = articleWrapper.children;
-  Object.values(contentNodes).forEach((node) => {
+  const contentNodes = Object.values(articleWrapper.children);
+  const amountOfNodes = contentNodes.length;
+  contentNodes.forEach((node, index) => {
     if (node.role !== "separator") {
       contentBlockWrapper.appendChild(node.cloneNode(true));
       node.remove();
+
+      console.log(amountOfNodes);
+      if (index === amountOfNodes - 1) {
+        articleWrapper.appendChild(contentBlockWrapper.cloneNode(true));
+      }
       return;
     }
     node.remove();
