@@ -1,0 +1,20 @@
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px 0;
+
+  @include breakpoint-md {
+    padding: 48px 0;
+  }
+
+  p {
+    all: initial;
+    color: $hint-color;
+    @include font-sf;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 120%;
+  }
+}

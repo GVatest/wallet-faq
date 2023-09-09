@@ -1,6 +1,6 @@
 $screen-sm: 320px;
 $screen-pre-md: 640px;
-$screen-md: 734px;
+$screen-md: 768px;
 $screen-pre-lg: 960px;
 $screen-lg: 1024px;
 $screen-pre-xl: 1280px;
@@ -20,7 +20,7 @@ $screen-xl: 1440px;
   }
 }
 
-// more than 734px
+// more than 768px
 @mixin breakpoint-md {
   @media (min-width: #{$screen-md}) {
     @content;
