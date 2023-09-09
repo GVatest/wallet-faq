@@ -31,7 +31,7 @@ function addLangToggle() {
   let toggleEl = document.createElement("li");
   const currentLangData = AVAILABLE_LANGS[CURRENT_LANG];
   toggleEl.innerHTML = `
-      <a href="${currentLangData.source}">
+      <a style="pointer-events:none;">
         <span>${currentLangData.name}</span>
         <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" width="16" height="22" viewBox="0 0 16 22" fill="none">
           <path d="M1.5 15.5L5.83176 20.7944C5.91474 20.8958 6.07258 20.8866 6.14322 20.7762L14 8.5" stroke="#007AFF" stroke-width="2.33" stroke-linecap="round" stroke-linejoin="round"/>
