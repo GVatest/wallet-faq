@@ -104,6 +104,15 @@
             }
           }
 
+          li {
+            color: $text-main-color;
+            @include font-sf;
+            text-align: justify;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 120%;
+          }
+
           time {
             display: inline-block;
             color: $hint-color;
