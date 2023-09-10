@@ -85,7 +85,6 @@ function formatArticle() {
       contentBlockWrapper.appendChild(node.cloneNode(true));
       node.remove();
 
-      console.log(amountOfNodes);
       if (index === amountOfNodes - 1) {
         articleWrapper.appendChild(contentBlockWrapper.cloneNode(true));
       }
