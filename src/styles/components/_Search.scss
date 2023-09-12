@@ -14,10 +14,21 @@
     background: rgba(239, 239, 244, 0.48);
 
     @include font-sf;
-    color: $hint-color;
+    color: $text-main-color;
     font-size: 20px;
     font-weight: 400;
     line-height: 120%;
+
+    &::placeholder {
+      color: $hint-color;
+    }
+
+    outline: 2px solid transparent !important;
+    @include with-transition(outline-color);
+
+    &:focus {
+      outline: 2px solid $link-color !important;
+    }
   }
 
   #serp-dd {

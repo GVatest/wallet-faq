@@ -101,7 +101,7 @@
   background: $block-background;
 
   @include breakpoint-md {
-    padding: 40px;
+    padding: 40px 40px 16px 40px;
   }
 
   &::after {
@@ -143,9 +143,7 @@
     padding: 0;
 
     @include breakpoint-md {
-      &:not(:last-child) {
-        padding: 0 12px 24px 0;
-      }
+      padding: 0 12px 24px 0;
     }
 
     a {
